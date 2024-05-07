@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Document</title>
+    <style>
+        body{
+            
+            background-color: rgb(235, 237, 235);
+            background-size: cover;
+
+        }
+        .container {
+            border: 2px solid black;
+            border-radius: 8px;
+            width: 400px;
+            height: 280px;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            left: 400px;
+            top: 100px;
+            
+
+        }
+
+        .button1 {
+            padding: 5px;
+            position: relative;
+            left: 10px;
+            background-color: green;
+        }
+
+        .button1:hover {
+            border: 2px solid red;
+        }
+
+        #button2 {
+            position: relative;
+            top: 20px;
+            left: 160px;
+        }
+
+        .container form {
+            margin-top: 60px;
+        }
+        .div1{
+    color: rgb(2, 90, 2);
+    text-align: center;
+    font-size:x-large;
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-container {
+      display: flex;
+      color: green;
+    }
+    </style>
+</head>
+
+<body>
+    
+    <div class="div1">
+        <h1> WELCOME BACK! </h1>
+    </div>
+    <div class="container">
+        <form action="">
+            <h3>Teacher Log in</h3>
+            Username:<input type="text" name="username" placeholder="Teacher id" id="u1" required><br>
+            <br>
+            Password:<input type="password" name="password" placeholder="password" id="u2" required><br>
+            <br>
+            <input type="button" value="Log in" class="button1">
+            
+            <button id="button2" style="display: none;"><a href="http://localhost:8000/chat/">Access Granted</a></button>
+        </form>
+    </div>
+    <script>
+        const username = document.getElementById("u1")
+        const password = document.getElementById("u2")
+        const button1 = document.querySelector(".button1")
+        button1.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (username.value == "Shweta_jadhav" && password.value == "12345") {
+                document.getElementById("button2").style.display = "block"
+                alert("successful login ")
+            }
+            else if (username.value == "groupmember" && password.value == "student") {
+                document.getElementById("button2").style.display = "block"
+                alert("successful login")
+            }
+            else {
+                alert(" Wrong Credentials")
+            }
+
+        })
+      
+    </script>
+     
+   
+
+</body>
+
+</html>

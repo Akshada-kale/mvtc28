@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:wght@300;400;600;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,700&display=swap');
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 1150px;
+            width: 90%;
+            margin: auto;
+        }
+
+        /* #############################################About Styling#################################### */
+
+        #about {
+            padding: 50px 0px;
+            background: #f5f5f7;
+        }
+
+        .about-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #about h1 {
+            font-size: 3.2rem;
+        }
+
+        #about p {
+            font-size: 1.6rem;
+            color: #555;
+        }
+
+        #about .small {
+            font-size: 1.6rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .about-img {
+            flex: 1 1 400px;
+            padding: 30px;
+            /* border: 2px solid red; */
+            animation: about-img-animation 2s ease-in-out forwards;
+            transform: translateX(150%);
+
+        }
+
+        @keyframes about-img-animation {
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        .about-text {
+            flex: 1 1 400px;
+            padding: 30px;
+            margin: auto;
+            animation: about-text-animation 2s ease-in-out forwards;
+            transform: translateX(-150%);
+
+
+        }
+
+        @keyframes about-text-animation {
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        .about-img img {
+            display: inline-block;
+            width: 400px;
+            max-width: 100%;
+            margin: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .buton {
+            margin-top: 4rem;
+        }
+
+        .getstarted-button {
+            border: none;
+            margin: 3rem;
+            margin-bottom: 4rem;
+            font-size: 1rem;
+            font-size: 2rem;
+            background-color: green;
+            color: #f5f5f7;
+            padding: 0.2em;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        @media (max-width:700) {
+            .getstarted-button {
+                margin-bottom: 4rem;
+            }
+
+            .buton {
+                margin-bottom: 4rem;
+            }
+        }
+
+        .navbar input[type='checkbox'],
+        .humburger-lines {
+            display: none;
+        }
+
+        .getstarted-button:hover {
+            background: transparent;
+            border: 2px solid rgba(12, 72, 12, 0.947);
+            color: black;
+            cursor: pointer;
+        }
+
+        .navbar {
+            box-shadow: 0px 5px 10px 0px #aaa;
+            width: 100%;
+            background: #ffff;
+
+
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            height: 64px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .menu-items {
+            order: 2;
+            display: flex;
+            list-style: none;
+
+        }
+
+        .logo {
+            order: 1;
+        }
+
+        .menu-items li {
+            list-style: none;
+            margin-right: 1.5rem;
+            font-size: 1.8rem;
+            align-items: center;
+        }
+
+        .menu-items a {
+            color: #444;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar a:hover {
+            color: #797b7b;
+            line-height: 90%;
+            border-bottom: 2px solid #707171;
+            line-height: 90%;
+
+        }
+
+        .landing-links {
+            display: flex;
+            order: 3;
+            list-style: none;
+            justify-content: space-between;
+        }
+
+
+        .btn-nav {
+            color: #fbfdfc;
+            text-align: center;
+            border-radius: 2em;
+            padding: 0.5em 0.7em;
+            display: inline-block;
+            background-color: #15ac31;
+            margin: 1rem;
+
+            justify-content: space-between;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .btn-nav:hover {
+            background: transparent;
+            border: 2px solid black;
+        }
+
+        .menu-items1 {
+            order: 2;
+            display: flex;
+            list-style: none;
+
+        }
+    </style>
+    <title>Graphic Designing</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="navbar-container container">
+            <h1 class="logo">MVTC</h1>
+            <ul class="menu-items">
+                <li class="item"><a href="{% url 'base:home' %}">Home</a></li>
+                <li class="item"><a href="{% url 'base:aboutpage' %}">About us</a></li>
+                <li class="item"><a href="{% url 'base:contactpage' %}">Contact us</a></li>
+            </ul>
+
+
+        </div>
+    </nav>
+
+    <section id="about">
+
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <p class="small">Graphic Designing</p>
+                <h1 class="About-heading">Graphic Designing</h1>
+                <p>Engineering graphics is a visual communication tool used by engineers to convey technical information
+                    through diagrams,
+                    drawings, and blueprints. It involves creating accurate representations of objects, structures, and
+                    systems using standardized
+                    symbols, lines, and geometric shapes. Engineering graphics is crucial for design, analysis, and
+                    documentation in various engineering
+                    disciplines, including mechanical, civil, and electrical engineering. It helps engineers visualize
+                    concepts, communicate ideas, and
+                    facilitate the manufacturing and construction processes.</p>
+
+            </div>
+
+            <div class="about-img">
+                <img src="https://www.forbes.com/advisor/wp-content/uploads/2023/06/graphic-designer-desk.jpeg-1-900x510.jpg"
+                    alt="">
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="buton">
+
+        <a href="{% url 'base:home' %}" class="getstarted-button">Back </a>
+    </div>
+
+</body>
+
+</html>

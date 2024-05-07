@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Section</title>
+    <style>
+        #bt1 {
+            position: absolute;
+            padding: 10px;
+            left: 35%;
+            top: 45%;
+            /* padding-left: 5px; */
+            /* padding-right: 5px; */
+        }
+
+        #bt2 {
+            display: flex;
+            position: absolute;
+            padding: 10px;
+            left: 50%;
+            top: 45%;
+        }
+        .buttons{
+            border: 5px solid black;
+            border-radius: 10px ;
+            position: relative;
+            top: 50px;
+            left: 400px;
+            width: 500px;
+            height: 500px;
+            background-color: rgb(202, 198, 194);
+        }
+        #bt2:hover{
+            background-color: green;
+            color: white;
+        }
+        #bt1:hover{
+            background-color: green;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buttons">
+        <a href="http://localhost:8000/chat/" style="text-decoration: none;"><button id="bt1">Chat</button></a>
+        <a href="{% url 'base:home' %}" style="text-decoration: none;"><button id="bt2">Go Home</button></a>
+    </div>
+</body>
+
+</html>

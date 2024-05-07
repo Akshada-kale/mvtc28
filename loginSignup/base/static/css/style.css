@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+.shadow-wrap{
+    border-radius: 5px;
+    padding: 25px;
+    background-color: #F0F2F8;
+}
+.form-wrap{
+    background-color: #fff;
+}
+.form-wrap form *{
+    display: block;
+    width: 100%;
+
+}
+.form-wrap form label{
+    margin-bottom:5px;
+    font-size:14px;
+    font-weight: 700;
+    line-height: 26px;
+
+}
+.form-wrap form input{
+padding:12px 20px;
+border-radius:5px;
+border:1px solid red;
+background: #fff;
+color: grey;
+}
+#id_username{
+    margin-bottom:20px;
+}
+.form-wrap button{
+    border-radius:5px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    font-size:16px;
+    padding: 12px 68px;
+    font-style:normal;
+    font-weight: 700;
+    line-height: 26px;
+    border: none;
+    margin-top: 30px;
+    line-height: 26px;
+
+}
+.sign-link{
+    text-align: center;
+    margin-top: 2px;
+    text-decoration: none;
+    position:relative;
+    left: 80px;
+}
+
+.wrong{
+    position: relative;
+    top: 170px;
+    right: 370px;
+}
+.signup-html{
+    border: 2px solid black;
+    padding: 20px;
+}
+
